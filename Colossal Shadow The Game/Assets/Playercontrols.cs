@@ -10,11 +10,11 @@ public class Playercontrols : MonoBehaviour
      {
         if (Input.GetKey(KeyCode.A))
          {
-            rb.velocity = new Vector2(-5, 0);
+            rb.velocity = new Vector2(-5, rb.velocity.y);
          }
         if (Input.GetKey(KeyCode.D))
          {
-            rb.velocity = new Vector2(5, 0);
+            rb.velocity = new Vector2(5, rb.velocity.y);
          }
         if (Input.GetKey(KeyCode.W))
         {
