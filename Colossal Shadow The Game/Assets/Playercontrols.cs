@@ -16,9 +16,9 @@ public class Playercontrols : MonoBehaviour
          {
             rb.velocity = new Vector2(5, rb.velocity.y);
          }
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            rb.velocity = new Vector2(0, 10);
+            rb.velocity = new Vector2(rb.velocity.x, 15f);
         }
 
 
