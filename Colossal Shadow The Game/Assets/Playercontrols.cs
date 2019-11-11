@@ -5,7 +5,7 @@ using UnityEngine;
 public class Playercontrols : MonoBehaviour
 {
     public Rigidbody2D rb;
-
+    public Animator anim;
     private void Update()
      {
 
@@ -13,12 +13,14 @@ public class Playercontrols : MonoBehaviour
          {
             rb.velocity = new Vector2(-5, rb.velocity.y);
             transform.localScale = new Vector2(-1, 1);
+            anim.SetBool("running", true);
          }
 
         if (Input.GetKey(KeyCode.D))
          {
             rb.velocity = new Vector2(5, rb.velocity.y);
             transform.localScale = new Vector2(1, 1);
+            anim.SetBool("running", true);
 
         }
 
