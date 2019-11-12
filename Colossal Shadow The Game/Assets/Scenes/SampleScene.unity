@@ -3726,7 +3726,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 79788108}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6ac22416c37b0204ea9978bab78bd7cf, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -4159,7 +4159,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.463706
+  orthographic size: 4.0687094
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4336,7 +4336,7 @@ Rigidbody2D:
   m_LinearDrag: 0.5
   m_AngularDrag: 0.05
   m_GravityScale: 5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: dd1e92df7eb8e5042a50bcd89baafc0e, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -4350,7 +4350,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 839078968}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: dd1e92df7eb8e5042a50bcd89baafc0e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -4382,6 +4382,8 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 256
+  speed: 8
+  jumpForce: 15
 --- !u!95 &839078974
 Animator:
   serializedVersion: 3

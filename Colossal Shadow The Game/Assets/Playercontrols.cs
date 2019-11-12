@@ -6,10 +6,16 @@ public class Playercontrols : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
+    private Collider2D coll;
+
+    // FSM
     private enum State {idel, running, jumping, falling}
     private State state = State.idel;
-    private Collider2D coll;
+
+    
     [SerializeField] private LayerMask ground;
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private float jumpForce = 15f;
 
     private void Start()
     {
@@ -18,41 +24,50 @@ public class Playercontrols : MonoBehaviour
         coll = GetComponent<Collider2D>();
     }
     private void Update()
-     {
+    {
         float hDirection = Input.GetAxis("Horizontal");
         float vDirection = Input.GetAxis("Vertical");
+        Movment(hDirection);
 
+        AnimationState();
+        anim.SetInteger("state", (int)state);
+
+
+    }
+
+    private void Movment(float hDirection)
+    {
+
+        // Move left
         if (hDirection < 0)
-         {
-            rb.velocity = new Vector2(-5, rb.velocity.y);
+        {
+            rb.velocity = new Vector2(-speed, rb.velocity.y);
             transform.localScale = new Vector2(-1, 1);
-            
-         }
 
+        }
+
+        //Move right
         else if (hDirection > 0)
-         {
-            rb.velocity = new Vector2(5, rb.velocity.y);
+        {
+            rb.velocity = new Vector2(speed, rb.velocity.y);
             transform.localScale = new Vector2(1, 1);
-            
+
 
         }
 
         else
         {
-            
+
         }
-        if (Input.GetButtonDown("Jump")&& coll.IsTouchingLayers(ground))
+        // Jump
+        if (Input.GetButtonDown("Jump") && coll.IsTouchingLayers(ground))
         {
-            rb.velocity = new Vector2(rb.velocity.x, 15f);
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             state = State.jumping;
         }
-
-        VelocityState();
-        anim.SetInteger("state", (int)state);
-
-
     }
-    private void VelocityState()
+
+    private void AnimationState()
     {
         if(state == State.jumping)
         {
