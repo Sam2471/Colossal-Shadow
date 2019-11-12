@@ -43,7 +43,7 @@ public class Playercontrols : MonoBehaviour
         }
         if (Input.GetButtonDown("Jump")&& coll.IsTouchingLayers(ground))
         {
-            rb.velocity = new Vector2(rb.velocity.x, 10f);
+            rb.velocity = new Vector2(rb.velocity.x, 15f);
             state = State.jumping;
         }
 
