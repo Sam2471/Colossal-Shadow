@@ -1,14 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Playercontrols : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
     private Collider2D coll;
-
-    public int gem = 0; 
 
     // FSM
     private enum State {idel, running, jumping, falling}
@@ -18,6 +17,8 @@ public class Playercontrols : MonoBehaviour
     [SerializeField] private LayerMask ground;
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 15f;
+    [SerializeField] private int gem = 0;
+    [SerializeField] private Text gemText;
 
     private void Start()
     {
@@ -43,6 +44,7 @@ public class Playercontrols : MonoBehaviour
         {
             Destroy(collision.gameObject);
             gem += 1;
+            gemText.text = gem.ToString();
         }
             
 
