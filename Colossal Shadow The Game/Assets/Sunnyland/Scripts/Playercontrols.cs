@@ -8,6 +8,8 @@ public class Playercontrols : MonoBehaviour
     private Animator anim;
     private Collider2D coll;
 
+    public int gem = 0; 
+
     // FSM
     private enum State {idel, running, jumping, falling}
     private State state = State.idel;
@@ -33,6 +35,18 @@ public class Playercontrols : MonoBehaviour
         anim.SetInteger("state", (int)state);
 
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Collectable")
+        {
+            Destroy(collision.gameObject);
+            gem += 1;
+        }
+            
+
+            
     }
 
     private void Movment(float hDirection)
