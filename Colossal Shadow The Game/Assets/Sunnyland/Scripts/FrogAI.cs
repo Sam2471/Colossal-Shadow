@@ -13,7 +13,7 @@ public class FrogAI : Enemy
 
 
     private Collider2D coll;
-    private Rigidbody2D rb;
+
 
     private bool facingLeft = true;
 
@@ -21,7 +21,7 @@ public class FrogAI : Enemy
     {
         base.Start();
         coll = GetComponent<Collider2D>();
-        rb = GetComponent<Rigidbody2D>();
+       
         
     }
 
