@@ -37,7 +37,7 @@ public class FrogAI : MonoBehaviour
         }
         if (coll.IsTouchingLayers(ground) && anim.GetBool("Falling"))
         {
-            anim.SetBool("Falling", false );
+            anim.SetBool("Falling", false);
             
         }
     }
