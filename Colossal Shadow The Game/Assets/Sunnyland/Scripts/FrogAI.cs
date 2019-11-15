@@ -87,4 +87,14 @@ public class FrogAI : MonoBehaviour
             }
         }
     }
+
+    public void JumpedOn()
+    {
+        anim.SetTrigger("EnemyDeath");
+    }
+
+    private void Death()
+    {
+        Destroy(this.gameObject);
+    }
 }
