@@ -60,12 +60,12 @@ public class Playercontrols : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        FrogAI frog = other.gameObject.GetComponent<FrogAI>();
+        Enemy enemy = other.gameObject.GetComponent<Enemy>();
         if (other.gameObject.tag == "Enemy")
         {
             if(state == State.falling)
             {
-                frog.JumpedOn();
+                enemy.JumpedOn();
                 Jump();
             }
             else
