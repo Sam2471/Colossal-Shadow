@@ -8,6 +8,7 @@ public class Playercontrols : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private Collider2D coll;
+    
 
     // FSM
     private enum State {idel, running, jumping, falling, hurt}
@@ -20,13 +21,17 @@ public class Playercontrols : MonoBehaviour
     [SerializeField] private int gem = 0;
     [SerializeField] private Text gemText;
     [SerializeField] private float hurtForce = 15f;
+    [SerializeField] private AudioSource step;
+    [SerializeField] private AudioSource grab;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
+        step = GetComponent<AudioSource>();
     }
+
     private void Update()
     {
         
@@ -49,6 +54,7 @@ public class Playercontrols : MonoBehaviour
     {
         if(collision.tag == "Collectable")
         {
+            grab.Play();
             Destroy(collision.gameObject);
             gem += 1;
             gemText.text = gem.ToString();
@@ -159,6 +165,11 @@ public class Playercontrols : MonoBehaviour
             state = State.idel;
         }
        
+    }
+
+    private void Footstep()
+    {
+        step.Play();
     }
     
 }
