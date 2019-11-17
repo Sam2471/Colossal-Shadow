@@ -2,25 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Playercontrols : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
     private Collider2D coll;
-    
+
 
     // FSM
-    private enum State {idel, running, jumping, falling, hurt}
+    private enum State { idel, running, jumping, falling, hurt }
     private State state = State.idel;
 
-    
-    [SerializeField] private LayerMask ground;
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 15f;
-    [SerializeField] private int gem = 0;
-    [SerializeField] private Text gemText;
     [SerializeField] private float hurtForce = 15f;
+    [SerializeField] private int health;
+    [SerializeField] private int gem = 0;
+    [SerializeField] private LayerMask ground;
+    [SerializeField] private TextMeshProUGUI gemText;
+    [SerializeField] private TextMeshProUGUI healthAmount;
     [SerializeField] private AudioSource step;
     [SerializeField] private AudioSource grab;
 
@@ -30,6 +33,7 @@ public class Playercontrols : MonoBehaviour
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
         step = GetComponent<AudioSource>();
+        healthAmount.text = health.ToString();
     }
 
     private void Update()
@@ -59,7 +63,14 @@ public class Playercontrols : MonoBehaviour
             gem += 1;
             gemText.text = gem.ToString();
         }
-            
+        if(collision.tag == "Powerup")
+        {
+            Destroy(collision.gameObject);
+            jumpForce = 20f;
+            GetComponent<SpriteRenderer>().color = Color.yellow;
+            StartCoroutine(ResetPowerup());
+
+        }    
 
             
     }
@@ -76,12 +87,13 @@ public class Playercontrols : MonoBehaviour
             }
             else
             {
-                state = State.hurt;
+                HandleHealth();
+
                 if (other.gameObject.transform.position.x < transform.position.x)
                 {
                     //Enemy is to my left and should be damaged and moved right 
                     rb.velocity = new Vector2(hurtForce, rb.velocity.y);
-                  
+
                 }
                 else
                 {
@@ -89,6 +101,18 @@ public class Playercontrols : MonoBehaviour
                     rb.velocity = new Vector2(-hurtForce, rb.velocity.y);
                 }
             }
+        }
+    }
+
+    private void HandleHealth()
+    {
+        state = State.hurt;
+        health -= 1;
+        healthAmount.text = health.ToString();
+
+        if (health <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
@@ -170,6 +194,13 @@ public class Playercontrols : MonoBehaviour
     private void Footstep()
     {
         step.Play();
+    }
+
+    private IEnumerator ResetPowerup()
+    {
+        yield return new WaitForSeconds(10);
+        jumpForce = 10f;
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
     
 }
