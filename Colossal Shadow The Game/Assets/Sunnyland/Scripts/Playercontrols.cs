@@ -19,11 +19,7 @@ public class Playercontrols : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 15f;
     [SerializeField] private float hurtForce = 15f;
-    [SerializeField] private int health;
-    [SerializeField] private int gem = 0;
     [SerializeField] private LayerMask ground;
-    [SerializeField] private TextMeshProUGUI gemText;
-    [SerializeField] private TextMeshProUGUI healthAmount;
     [SerializeField] private AudioSource step;
     [SerializeField] private AudioSource grab;
 
@@ -33,7 +29,7 @@ public class Playercontrols : MonoBehaviour
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
         step = GetComponent<AudioSource>();
-        healthAmount.text = health.ToString();
+        PermanentUI.perm.healthAmount.text = PermanentUI.perm.health.ToString();
     }
 
     private void Update()
@@ -60,8 +56,8 @@ public class Playercontrols : MonoBehaviour
         {
             grab.Play();
             Destroy(collision.gameObject);
-            gem += 1;
-            gemText.text = gem.ToString();
+            PermanentUI.perm.gem += 1;
+            PermanentUI.perm.gemText.text = PermanentUI.perm.gem.ToString();
         }
         if(collision.tag == "Powerup")
         {
@@ -107,10 +103,10 @@ public class Playercontrols : MonoBehaviour
     private void HandleHealth()
     {
         state = State.hurt;
-        health -= 1;
-        healthAmount.text = health.ToString();
+        PermanentUI.perm.health -= 1;
+        PermanentUI.perm.healthAmount.text = PermanentUI.perm.health.ToString();
 
-        if (health <= 0)
+        if (PermanentUI.perm.health <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
