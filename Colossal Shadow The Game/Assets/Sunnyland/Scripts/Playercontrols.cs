@@ -198,8 +198,8 @@ public class Playercontrols : MonoBehaviour
 
     private IEnumerator ResetPowerup()
     {
-        yield return new WaitForSeconds(10);
-        jumpForce = 10f;
+        yield return new WaitForSeconds(15);
+        jumpForce = 12f;
         GetComponent<SpriteRenderer>().color = Color.white;
     }
     
