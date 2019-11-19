@@ -10,15 +10,21 @@ public class Playercontrols : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private Collider2D coll;
-
-
+    
     // FSM
-    private enum State { idel, running, jumping, falling, hurt }
+    private enum State { idel, running, jumping, falling, hurt, climb }
     private State state = State.idel;
+
+    [HideInInspector] public bool canClimb = false;
+    [HideInInspector] public bool lowerLadder = false;
+    [HideInInspector] public bool topLadder = false;
+    public Ladder ladder;
+    private float naturalGravity;
 
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 15f;
     [SerializeField] private float hurtForce = 15f;
+    [SerializeField] private float climbspeed = 3f;
     [SerializeField] private LayerMask ground;
     [SerializeField] private AudioSource step;
     [SerializeField] private AudioSource grab;
@@ -29,6 +35,7 @@ public class Playercontrols : MonoBehaviour
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
         step = GetComponent<AudioSource>();
+        naturalGravity = rb.gravityScale;
         
     }
 
@@ -39,7 +46,12 @@ public class Playercontrols : MonoBehaviour
         float hDirection = Input.GetAxis("Horizontal");
         float vDirection = Input.GetAxis("Vertical");
 
-        if (state != State.hurt)
+        if(state == State.climb)
+        {
+            Climb();
+        }
+
+        else if (state != State.hurt)
         {
             Movment(hDirection);
         }
@@ -114,7 +126,14 @@ public class Playercontrols : MonoBehaviour
 
     private void Movment(float hDirection)
     {
-
+        if (canClimb && Mathf.Abs(Input.GetAxis("Vertical")) > .1f)
+        {
+            state = State.climb;
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+            transform.position = new Vector3(ladder.transform.position.x, rb.position.y);
+            rb.gravityScale = 0f;
+        }
+        
         // Move left
         if (hDirection < 0)
         {
@@ -152,7 +171,12 @@ public class Playercontrols : MonoBehaviour
 
     private void AnimationState()
     {
-        if(state == State.jumping)
+        if(state == State.climb)
+        {
+
+        }
+
+        else if (state == State.jumping)
         {
             if (rb.velocity.y < .1f)
                 state = State.falling; 
@@ -199,4 +223,32 @@ public class Playercontrols : MonoBehaviour
         GetComponent<SpriteRenderer>().color = Color.white;
     }
     
+    private void Climb()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            canClimb = false;
+            rb.gravityScale = naturalGravity;
+            Jump();
+        }
+        float vDirection = Input.GetAxis("Vertical");
+        {
+            //Up
+            if (vDirection > .1f && !topLadder)
+            {
+                rb.velocity = new Vector2(0f, vDirection * climbspeed);
+            }
+            //down
+            else if (vDirection < -.1f && !lowerLadder)
+            {
+                rb.velocity = new Vector2(0f, vDirection * climbspeed);
+            }
+            //still
+            else
+            {
+
+            }
+        }
+    }
 }
