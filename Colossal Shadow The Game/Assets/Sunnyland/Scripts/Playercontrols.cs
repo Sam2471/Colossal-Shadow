@@ -29,7 +29,7 @@ public class Playercontrols : MonoBehaviour
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
         step = GetComponent<AudioSource>();
-        PermanentUI.perm.healthAmount.text = PermanentUI.perm.health.ToString();
+        
     }
 
     private void Update()

@@ -30,6 +30,8 @@ public class PermanentUI : MonoBehaviour
     {
         gem = 0;
         gemText.text = gem.ToString();
+        health = 5;
+        healthAmount.text = health.ToString();
     }
 
 
