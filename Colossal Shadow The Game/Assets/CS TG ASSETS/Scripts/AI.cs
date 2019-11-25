@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FrogAI : Enemy
+public class AI : Enemy
 {
     [SerializeField] private float leftCap;
     [SerializeField] private float rightCap;
