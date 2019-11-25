@@ -10183,9 +10183,9 @@ GameObject:
   - component: {fileID: 1745487757}
   - component: {fileID: 1745487756}
   - component: {fileID: 1745487758}
-  - component: {fileID: 1745487759}
   - component: {fileID: 1745487761}
   - component: {fileID: 1745487760}
+  - component: {fileID: 1745487759}
   m_Layer: 0
   m_Name: LightBandit
   m_TagString: Enemy
@@ -10250,8 +10250,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745487755}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -63.908985, y: -0.3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -63.908985, y: -0.21, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -10287,13 +10287,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e099fe21901b54ea92968790d0cfaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftCap: -88
-  rightCap: -38
+  leftCap: -80
+  rightCap: -100
   jumpLength: 5
   jumpHeight: 15
   ground:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
 --- !u!61 &1745487760
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10419,7 +10419,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754530930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -68.592545, y: 1.259846, z: -10}
+  m_LocalPosition: {x: -68.57764, y: 1.259846, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1494693203}
@@ -10664,9 +10664,9 @@ GameObject:
   - component: {fileID: 2038235555}
   - component: {fileID: 2038235556}
   - component: {fileID: 2038235557}
-  - component: {fileID: 2038235558}
   - component: {fileID: 2038235560}
   - component: {fileID: 2038235559}
+  - component: {fileID: 2038235558}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -10683,7 +10683,7 @@ Transform:
   m_GameObject: {fileID: 2038235554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -68.75, y: -0.23, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -10774,11 +10774,11 @@ MonoBehaviour:
   ladder: {fileID: 0}
   speed: 5
   jumpForce: 15
-  hurtForce: 5
+  hurtForce: 15
   climbspeed: 3
   ground:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
   step: {fileID: 0}
   grab: {fileID: 0}
 --- !u!61 &2038235559
