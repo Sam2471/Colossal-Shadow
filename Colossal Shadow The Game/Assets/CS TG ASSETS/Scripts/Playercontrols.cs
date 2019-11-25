@@ -115,13 +115,13 @@ public class Playercontrols : MonoBehaviour
     private void HandleHealth()
     {
         state = State.hurt;
-        PermanentUI.perm.health -= 1;
-        PermanentUI.perm.healthAmount.text = PermanentUI.perm.health.ToString();
+        //PermanentUI.perm.health -= 1;
+        //PermanentUI.perm.healthAmount.text = PermanentUI.perm.health.ToString();
 
-        if (PermanentUI.perm.health <= 0)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+        //if (PermanentUI.perm.health <= 0)
+         {
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+         }
     }
 
     private void Movment(float hDirection)

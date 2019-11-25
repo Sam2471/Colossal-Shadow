@@ -22,8 +22,8 @@ public class Enemy : MonoBehaviour
         anim.SetTrigger("EnemyDeath");
         boom.Play();
         rb.velocity = Vector2.zero;
-        rb.bodyType = RigidbodyType2D.Kinematic;
-        GetComponent<Collider2D>().enabled = false;
+        //rb.bodyType = RigidbodyType2D.Kinematic;
+        //GetComponent<Collider2D>().enabled = false;
     }
 
     private void Death()
