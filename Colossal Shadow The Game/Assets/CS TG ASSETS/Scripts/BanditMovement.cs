@@ -5,8 +5,7 @@ using UnityEngine;
 public class BanditMovement : MonoBehaviour
 {
     public float speedbl;
-    private float distance;
-
+  
     private bool movingRight = true;
 
     public Transform groundDetection;
@@ -15,7 +14,7 @@ public class BanditMovement : MonoBehaviour
     {
         transform.Translate(Vector2.right * speedbl * Time.deltaTime);
 
-        RaycastHit2D groundinfo = Physics2D.Raycast(groundDetection.position, Vector2.down, 10f);
+        RaycastHit2D groundinfo = Physics2D.Raycast(groundDetection.position, Vector2.down, 4f);
         if(groundinfo.collider == false)
         {
             if(movingRight == true)
