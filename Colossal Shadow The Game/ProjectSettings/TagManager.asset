@@ -47,14 +47,14 @@ TagManager:
   - name: Background
     uniqueID: 258842575
     locked: 0
-  - name: Middleground
-    uniqueID: 2650678993
-    locked: 0
   - name: Foreground
     uniqueID: 2414017873
     locked: 0
   - name: Objects BWT
     uniqueID: 89249219
+    locked: 0
+  - name: Middleground
+    uniqueID: 2650678993
     locked: 0
   - name: Entity Layer
     uniqueID: 667174533
