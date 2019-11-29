@@ -66,7 +66,7 @@ public class Playercontrols : MonoBehaviour
     {
         if(collision.tag == "Collectable")
         {
-            grab.Play();
+            //grab.Play();
             Destroy(collision.gameObject);
             PermanentUI.perm.gem += 1;
             PermanentUI.perm.gemText.text = PermanentUI.perm.gem.ToString();
