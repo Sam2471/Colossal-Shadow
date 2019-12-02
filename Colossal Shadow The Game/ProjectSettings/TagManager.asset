@@ -7,6 +7,7 @@ TagManager:
   - Collectable
   - Enemy
   - Powerup
+  - Trap
   layers:
   - Default
   - TransparentFX
@@ -56,9 +57,9 @@ TagManager:
   - name: Middleground
     uniqueID: 2650678993
     locked: 0
+  - name: Traps
+    uniqueID: 2079262065
+    locked: 0
   - name: Entity Layer
     uniqueID: 667174533
-    locked: 0
-  - name: Objects WT
-    uniqueID: 2020375487
     locked: 0

@@ -15,12 +15,13 @@ public class Playercontrols : MonoBehaviour
     private enum State { idel, running, jumping, falling, hurt, climb }
     private State state = State.idel;
 
+    public bool PlayerDeath = false;
     [HideInInspector] public bool canClimb = false;
     [HideInInspector] public bool lowerLadder = false;
     [HideInInspector] public bool topLadder = false;
     public Ladder ladder;
     private float naturalGravity;
-
+        
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 15f;
     [SerializeField] private float hurtForce = 15f;
@@ -62,9 +63,18 @@ public class Playercontrols : MonoBehaviour
 
     }
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Collectable")
+        if (collision.gameObject.tag == "Trap")
+        {
+            Destroy(this.gameObject);
+           
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+        
+        if (collision.tag == "Collectable")
         {
             //grab.Play();
             Destroy(collision.gameObject);
@@ -82,6 +92,7 @@ public class Playercontrols : MonoBehaviour
 
             
     }
+
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -169,6 +180,8 @@ public class Playercontrols : MonoBehaviour
 
     }
 
+    
+
     private void AnimationState()
     {
         if(state == State.climb)
@@ -215,7 +228,8 @@ public class Playercontrols : MonoBehaviour
     {
         step.Play();
     }
-
+    
+    
     private IEnumerator ResetPowerup()
     {
         yield return new WaitForSeconds(15);
