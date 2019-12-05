@@ -60783,16 +60783,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 498586520}
     m_Modifications:
-    - target: {fileID: 4641785576376090659, guid: 5fdace8122b80c54dad9f320d6d301d0,
-        type: 3}
-      propertyPath: m_Name
-      value: Spikesdown (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4641785576376090659, guid: 5fdace8122b80c54dad9f320d6d301d0,
-        type: 3}
-      propertyPath: m_TagString
-      value: Trap
-      objectReference: {fileID: 0}
     - target: {fileID: 931655093432426087, guid: 5fdace8122b80c54dad9f320d6d301d0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -60847,6 +60837,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641785576376090659, guid: 5fdace8122b80c54dad9f320d6d301d0,
+        type: 3}
+      propertyPath: m_Name
+      value: Spikesdown (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641785576376090659, guid: 5fdace8122b80c54dad9f320d6d301d0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fdace8122b80c54dad9f320d6d301d0, type: 3}
@@ -66483,7 +66483,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494693202}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.798313, y: 0.28984594, z: -10}
+  m_LocalPosition: {x: 32.859753, y: 0.28984594, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1296473171}
@@ -67422,7 +67422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754530930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.798313, y: 0.28984594, z: -10}
+  m_LocalPosition: {x: 32.859753, y: 0.28984594, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -68215,16 +68215,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 868585698}
     m_Modifications:
-    - target: {fileID: 9173158195678209500, guid: 6b51da4484bb5a8439c477fc815ac7b0,
-        type: 3}
-      propertyPath: m_Name
-      value: Spikesright
-      objectReference: {fileID: 0}
-    - target: {fileID: 9173158195678209500, guid: 6b51da4484bb5a8439c477fc815ac7b0,
-        type: 3}
-      propertyPath: m_TagString
-      value: Trap
-      objectReference: {fileID: 0}
     - target: {fileID: 8168758289513777721, guid: 6b51da4484bb5a8439c477fc815ac7b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -68279,6 +68269,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173158195678209500, guid: 6b51da4484bb5a8439c477fc815ac7b0,
+        type: 3}
+      propertyPath: m_Name
+      value: Spikesright
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173158195678209500, guid: 6b51da4484bb5a8439c477fc815ac7b0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b51da4484bb5a8439c477fc815ac7b0, type: 3}
@@ -68501,16 +68501,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 498586520}
     m_Modifications:
-    - target: {fileID: 4641785576376090659, guid: 5fdace8122b80c54dad9f320d6d301d0,
-        type: 3}
-      propertyPath: m_Name
-      value: Spikesdown
-      objectReference: {fileID: 0}
-    - target: {fileID: 4641785576376090659, guid: 5fdace8122b80c54dad9f320d6d301d0,
-        type: 3}
-      propertyPath: m_TagString
-      value: Trap
-      objectReference: {fileID: 0}
     - target: {fileID: 931655093432426087, guid: 5fdace8122b80c54dad9f320d6d301d0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -68565,6 +68555,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641785576376090659, guid: 5fdace8122b80c54dad9f320d6d301d0,
+        type: 3}
+      propertyPath: m_Name
+      value: Spikesdown
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641785576376090659, guid: 5fdace8122b80c54dad9f320d6d301d0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fdace8122b80c54dad9f320d6d301d0, type: 3}

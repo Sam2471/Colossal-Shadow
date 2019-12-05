@@ -29,6 +29,8 @@ public class Playercontrols : MonoBehaviour
     [SerializeField] private LayerMask ground;
     [SerializeField] private AudioSource step;
     [SerializeField] private AudioSource grab;
+    [SerializeField] private AudioSource ow;
+    [SerializeField] private AudioSource hop;
 
     private void Start()
     {
@@ -76,7 +78,7 @@ public class Playercontrols : MonoBehaviour
         
         if (collision.tag == "Collectable")
         {
-            //grab.Play();
+            grab.Play();
             Destroy(collision.gameObject);
             PermanentUI.perm.gem += 1;
             PermanentUI.perm.gemText.text = PermanentUI.perm.gem.ToString();
@@ -150,7 +152,7 @@ public class Playercontrols : MonoBehaviour
         {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
             transform.localScale = new Vector2(-1, 1);
-
+            
         }
 
         //Move right
@@ -175,6 +177,7 @@ public class Playercontrols : MonoBehaviour
 
     private void Jump()
     {
+        hop.Play();
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         state = State.jumping;
 
@@ -205,9 +208,11 @@ public class Playercontrols : MonoBehaviour
 
         else if(state == State.hurt)
         {
-            if(Mathf.Abs(rb.velocity.x) < .1f)
+           
+            if (Mathf.Abs(rb.velocity.x) < .1f)
             {
                 state = State.idel;
+                
             }
         }
 
@@ -215,6 +220,7 @@ public class Playercontrols : MonoBehaviour
         {
             //Moving
             state = State.running;
+            
         }
 
         else
@@ -222,6 +228,11 @@ public class Playercontrols : MonoBehaviour
             state = State.idel;
         }
        
+    }
+
+    private void TakenDamage()
+    {
+        ow.Play();
     }
 
     private void Footstep()
