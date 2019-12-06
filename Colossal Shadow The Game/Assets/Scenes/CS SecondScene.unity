@@ -1179,38 +1179,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4019800222044582882}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &468897304 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3204212850704728264, guid: 5b0b858424cac0c4baabf950fa6c234c,
-    type: 3}
-  m_PrefabInstance: {fileID: 6723683956205012402}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &468897306
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468897304}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6875, y: 0.6875}
-    newSize: {x: 0.6875, y: 0.6875}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.6875, y: 0.6875}
-  m_EdgeRadius: 0
 --- !u!1 &477713044
 GameObject:
   m_ObjectHideFlags: 0
@@ -60783,6 +60751,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 498586520}
     m_Modifications:
+    - target: {fileID: 4641785576376090659, guid: 5fdace8122b80c54dad9f320d6d301d0,
+        type: 3}
+      propertyPath: m_Name
+      value: Spikesdown (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641785576376090659, guid: 5fdace8122b80c54dad9f320d6d301d0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
     - target: {fileID: 931655093432426087, guid: 5fdace8122b80c54dad9f320d6d301d0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -60837,16 +60815,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4641785576376090659, guid: 5fdace8122b80c54dad9f320d6d301d0,
-        type: 3}
-      propertyPath: m_Name
-      value: Spikesdown (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4641785576376090659, guid: 5fdace8122b80c54dad9f320d6d301d0,
-        type: 3}
-      propertyPath: m_TagString
-      value: Trap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fdace8122b80c54dad9f320d6d301d0, type: 3}
@@ -66483,7 +66451,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494693202}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.859753, y: 0.28984594, z: -10}
+  m_LocalPosition: {x: 32.817497, y: 0.28984594, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1296473171}
@@ -67422,7 +67390,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754530930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.859753, y: 0.28984594, z: -10}
+  m_LocalPosition: {x: 32.817497, y: 0.28984594, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -68206,6 +68174,16 @@ PrefabInstance:
       propertyPath: climbspeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7338538772497157030, guid: 43c9244e5e6976f48be4b936eff280d0,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e9f72f79b945794408b29f24b41a87ed, type: 3}
+    - target: {fileID: 7338538772497157030, guid: 43c9244e5e6976f48be4b936eff280d0,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43c9244e5e6976f48be4b936eff280d0, type: 3}
 --- !u!1001 &4019800222044582882
@@ -68215,6 +68193,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 868585698}
     m_Modifications:
+    - target: {fileID: 9173158195678209500, guid: 6b51da4484bb5a8439c477fc815ac7b0,
+        type: 3}
+      propertyPath: m_Name
+      value: Spikesright
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173158195678209500, guid: 6b51da4484bb5a8439c477fc815ac7b0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trap
+      objectReference: {fileID: 0}
     - target: {fileID: 8168758289513777721, guid: 6b51da4484bb5a8439c477fc815ac7b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -68270,16 +68258,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9173158195678209500, guid: 6b51da4484bb5a8439c477fc815ac7b0,
-        type: 3}
-      propertyPath: m_Name
-      value: Spikesright
-      objectReference: {fileID: 0}
-    - target: {fileID: 9173158195678209500, guid: 6b51da4484bb5a8439c477fc815ac7b0,
-        type: 3}
-      propertyPath: m_TagString
-      value: Trap
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b51da4484bb5a8439c477fc815ac7b0, type: 3}
 --- !u!1 &4019800222044582883 stripped
@@ -68301,7 +68279,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0031356812, y: 0.004703641}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -68312,7 +68290,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6875, y: 0.6875}
+  m_Size: {x: 0.3174839, y: 0.5777495}
   m_EdgeRadius: 0
 --- !u!1001 &6723683956205012402
 PrefabInstance:
@@ -68325,11 +68303,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spikesup
-      objectReference: {fileID: 0}
-    - target: {fileID: 3204212850704728264, guid: 5b0b858424cac0c4baabf950fa6c234c,
-        type: 3}
-      propertyPath: m_TagString
-      value: Trap
       objectReference: {fileID: 0}
     - target: {fileID: 4799892861091384019, guid: 5b0b858424cac0c4baabf950fa6c234c,
         type: 3}
@@ -68400,11 +68373,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spikesleft
       objectReference: {fileID: 0}
-    - target: {fileID: 1473081805894104346, guid: 06870e0ed5ea0134caad675b04df8b8a,
-        type: 3}
-      propertyPath: m_TagString
-      value: Trap
-      objectReference: {fileID: 0}
     - target: {fileID: 1101580819457513262, guid: 06870e0ed5ea0134caad675b04df8b8a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -68462,38 +68430,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06870e0ed5ea0134caad675b04df8b8a, type: 3}
---- !u!1 &7447762985400883016 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1473081805894104346, guid: 06870e0ed5ea0134caad675b04df8b8a,
-    type: 3}
-  m_PrefabInstance: {fileID: 7447762985400883015}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &7447762985400883017
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7447762985400883016}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6875, y: 0.6875}
-    newSize: {x: 0.6875, y: 0.6875}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.6875, y: 0.6875}
-  m_EdgeRadius: 0
 --- !u!1001 &7643387290796556786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68501,6 +68437,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 498586520}
     m_Modifications:
+    - target: {fileID: 4641785576376090659, guid: 5fdace8122b80c54dad9f320d6d301d0,
+        type: 3}
+      propertyPath: m_Name
+      value: Spikesdown
+      objectReference: {fileID: 0}
     - target: {fileID: 931655093432426087, guid: 5fdace8122b80c54dad9f320d6d301d0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -68556,47 +68497,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4641785576376090659, guid: 5fdace8122b80c54dad9f320d6d301d0,
-        type: 3}
-      propertyPath: m_Name
-      value: Spikesdown
-      objectReference: {fileID: 0}
-    - target: {fileID: 4641785576376090659, guid: 5fdace8122b80c54dad9f320d6d301d0,
-        type: 3}
-      propertyPath: m_TagString
-      value: Trap
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fdace8122b80c54dad9f320d6d301d0, type: 3}
---- !u!1 &7643387290796556787 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4641785576376090659, guid: 5fdace8122b80c54dad9f320d6d301d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 7643387290796556786}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &7643387290796556788
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7643387290796556787}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6875, y: 0.6875}
-    newSize: {x: 0.6875, y: 0.6875}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.6875, y: 0.6875}
-  m_EdgeRadius: 0
