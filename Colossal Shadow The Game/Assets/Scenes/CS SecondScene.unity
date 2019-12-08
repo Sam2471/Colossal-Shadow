@@ -63744,7 +63744,7 @@ Tilemap:
   - first: {x: 139, y: 2, z: 0}
     second:
       m_TileIndex: 8
-      m_TileSpriteIndex: 8
+      m_TileSpriteIndex: 15
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -65700,9 +65700,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: -6880971782189556426, guid: 5b1de2255675629479eecd6df80032eb,
-      type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: -217135721315158318, guid: b10571acfc5cfea4981a498d107fd411,
       type: 3}
@@ -65721,8 +65720,9 @@ Tilemap:
   - m_RefCount: 34
     m_Data: {fileID: -1036729505177708955, guid: 5b1de2255675629479eecd6df80032eb,
       type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -6880971782189556426, guid: 5b1de2255675629479eecd6df80032eb,
+      type: 3}
   - m_RefCount: 43
     m_Data: {fileID: -2039030707923295177, guid: 5b1de2255675629479eecd6df80032eb,
       type: 3}
@@ -67981,6 +67981,16 @@ PrefabInstance:
         type: 3}
       propertyPath: climbspeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673014952396545050, guid: 43c9244e5e6976f48be4b936eff280d0,
+        type: 3}
+      propertyPath: Dashspeed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673014952396545050, guid: 43c9244e5e6976f48be4b936eff280d0,
+        type: 3}
+      propertyPath: Dashheight
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43c9244e5e6976f48be4b936eff280d0, type: 3}

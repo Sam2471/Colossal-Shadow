@@ -20970,6 +20970,16 @@ PrefabInstance:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3673014952396545050, guid: 43c9244e5e6976f48be4b936eff280d0,
+        type: 3}
+      propertyPath: Dashheight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673014952396545050, guid: 43c9244e5e6976f48be4b936eff280d0,
+        type: 3}
+      propertyPath: Dashspeed
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43c9244e5e6976f48be4b936eff280d0, type: 3}
 --- !u!1001 &4254880805174825595

@@ -12,8 +12,8 @@ public class Playercontrols : MonoBehaviour
     private Collider2D coll;
     
     // FSM
-    private enum State { idel, running, jumping, falling, hurt, climb }
-    private State state = State.idel;
+    private enum State { idle, running, jumping, falling, hurt, climb, dash}
+    private State state = State.idle;
 
     public bool PlayerDeath = false;
     [HideInInspector] public bool canClimb = false;
@@ -24,6 +24,8 @@ public class Playercontrols : MonoBehaviour
         
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 15f;
+    [SerializeField] private float Dashheight = 8f;
+    [SerializeField] private float Dashspeed = 10f;
     [SerializeField] private float hurtForce = 15f;
     [SerializeField] private float climbspeed = 3f;
     [SerializeField] private LayerMask ground;
@@ -173,6 +175,36 @@ public class Playercontrols : MonoBehaviour
         {
             Jump();
         }
+        // Dash
+        if (Input.GetButtonDown("Dash") && coll.IsTouchingLayers(ground))
+        {
+            
+            if (hDirection < 0)
+            {
+                
+                rb.velocity = new Vector2(-Dashspeed, Dashheight);
+                transform.localScale = new Vector2(-1, 1);
+                state = State.jumping;
+
+
+            }
+            else if (hDirection > 0)
+            {
+                
+                rb.velocity = new Vector2(Dashspeed, Dashheight);
+                transform.localScale = new Vector2(1, 1);
+                state = State.jumping;
+
+
+
+            }
+            else
+            {
+
+            }
+
+        }
+
     }
 
     private void Jump()
@@ -202,7 +234,7 @@ public class Playercontrols : MonoBehaviour
         {
             if(coll.IsTouchingLayers(ground))
             {
-                state = State.idel;
+                state = State.idle;
             }
         }
 
@@ -211,7 +243,7 @@ public class Playercontrols : MonoBehaviour
            
             if (Mathf.Abs(rb.velocity.x) < .1f)
             {
-                state = State.idel;
+                state = State.idle;
                 
             }
         }
@@ -225,7 +257,7 @@ public class Playercontrols : MonoBehaviour
 
         else
         {
-            state = State.idel;
+            state = State.idle;
         }
        
     }
