@@ -33,7 +33,8 @@ public class Playercontrols : MonoBehaviour
     [SerializeField] private AudioSource grab;
     [SerializeField] private AudioSource ow;
     [SerializeField] private AudioSource hop;
-    
+    [SerializeField] private AudioSource hoptempo;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -181,7 +182,8 @@ public class Playercontrols : MonoBehaviour
             
             if (hDirection < 0)
             {
-                
+
+                hoptempo.Play();
                 rb.velocity = new Vector2(-Dashspeed, Dashheight);
                 transform.localScale = new Vector2(-1, 1);
                 state = State.jumping;
@@ -190,7 +192,7 @@ public class Playercontrols : MonoBehaviour
             }
             else if (hDirection > 0)
             {
-                
+                hoptempo.Play();
                 rb.velocity = new Vector2(Dashspeed, Dashheight);
                 transform.localScale = new Vector2(1, 1);
                 state = State.jumping;
