@@ -49065,7 +49065,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'WASD - Move
 
-    Space - Dash '
+    Space - Dash(OP) '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -49131,13 +49131,13 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -78.03613, y: 0, z: 0, w: -37.929688}
+  m_margin: {x: -139.97192, y: 0, z: 0, w: -37.929688}
   m_textInfo:
     textComponent: {fileID: 624536554}
-    characterCount: 25
+    characterCount: 29
     spriteCount: 0
     spaceCount: 6
-    wordCount: 6
+    wordCount: 7
     linkCount: 0
     lineCount: 2
     pageCount: 1
@@ -65644,12 +65644,12 @@ PrefabInstance:
     - target: {fileID: 3673014952396545050, guid: 43c9244e5e6976f48be4b936eff280d0,
         type: 3}
       propertyPath: Dashheight
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3673014952396545050, guid: 43c9244e5e6976f48be4b936eff280d0,
         type: 3}
       propertyPath: Dashspeed
-      value: 120
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 3673014952396545050, guid: 43c9244e5e6976f48be4b936eff280d0,
         type: 3}
