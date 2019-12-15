@@ -13,5 +13,13 @@ public class NextScene : MonoBehaviour
         {
             SceneManager.LoadScene(sceneName);  // option 2
         }
+
+    }
+
+    public void load()
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
+    
+

@@ -20,4 +20,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CS SecondScene.unity
     guid: 77a6dbdd468d4de45a6d18f478821130
+  - enabled: 1
+    path: Assets/Scenes/CS FirstScene2.unity
+    guid: bbb3e68f3285231469dcdb9455d069cb
+  - enabled: 1
+    path: Assets/Scenes/End Scene.unity
+    guid: b07b9562f6697734fa87013d2d9a0bb3
+  - enabled: 1
+    path: Assets/Scenes/DeathScene.unity
+    guid: 66726bb9d68ac74478b3ae976dc4bed2
+  - enabled: 1
+    path: Assets/Scenes/DeathScene2.unity
+    guid: 1cce2fdcb3cf70a4e89535b223ff7604
+  - enabled: 1
+    path: Assets/Scenes/DeathScene3.unity
+    guid: 05be23e6603097143b5e47fc40a3e93a
   m_configObjects: {}

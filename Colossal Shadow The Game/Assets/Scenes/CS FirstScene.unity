@@ -49527,7 +49527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c75264ad583fbd4e96408b90166e3f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
+  sceneName: DeathScene
 --- !u!61 &909315922
 BoxCollider2D:
   m_ObjectHideFlags: 0
