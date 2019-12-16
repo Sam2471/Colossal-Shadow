@@ -20,6 +20,14 @@ public class NextScene : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+    public void checkname()
+    {
+        if (sceneName == "DeathScene")
+        {
+            Destroy(PermanentUI.perm.gameObject);
+        }
+    }
+     
 }
     
 
