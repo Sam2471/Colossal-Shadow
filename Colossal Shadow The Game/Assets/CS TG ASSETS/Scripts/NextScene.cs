@@ -6,7 +6,29 @@ using UnityEngine.SceneManagement;
 public class NextScene : MonoBehaviour
 {
     [SerializeField] private string sceneName; // option 1
+    
 
+    private void Start()
+    {
+        
+
+    }
+    private void Update()
+    {
+        string Death = SceneManager.GetActiveScene().name;
+        if (Death == "DeathScene")
+        {
+            Destroy(PermanentUI.perm.gameObject);
+        }
+        else if (Death == "DeathScene2")
+        {
+            Destroy(PermanentUI.perm.gameObject);
+        }
+        if (Death == "DeathScene3")
+        {
+            Destroy(PermanentUI.perm.gameObject);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -20,14 +42,14 @@ public class NextScene : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
-    public void checkname()
+    public void Checkname()
     {
-        if (sceneName == "DeathScene")
-        {
-            Destroy(PermanentUI.perm.gameObject);
-        }
+        
+
+        
+        //SceneManager.LoadScene
     }
-     
+
 }
     
 

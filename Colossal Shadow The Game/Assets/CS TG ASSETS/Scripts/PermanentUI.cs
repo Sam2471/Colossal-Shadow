@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PermanentUI : MonoBehaviour
 {
-
+    public int score = 0; 
     public int health = 5;
     public int gem = 0;
     public TextMeshProUGUI healthAmount;

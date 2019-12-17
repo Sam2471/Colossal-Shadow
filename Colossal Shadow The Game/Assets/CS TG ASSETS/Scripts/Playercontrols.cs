@@ -74,8 +74,8 @@ public class Playercontrols : MonoBehaviour
         if (collision.gameObject.tag == "Trap")
         {
             Destroy(this.gameObject);
-           
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+            SceneManager.LoadScene("DeathScene2");
         }
 
         
